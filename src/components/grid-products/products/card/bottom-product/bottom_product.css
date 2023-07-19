@@ -1,0 +1,12 @@
+#price {
+    float: right;
+}
+
+p {
+    display: inline;
+    margin: 0;
+}
+
+h3 {
+    margin: 0;
+}

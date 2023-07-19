@@ -1,8 +1,11 @@
 import './App.css'
+import GridProducts from './components/grid-products/grid_products';
 
 function App() {
   return (
-    <h1>Hello</h1>
+    <>
+      {GridProducts()}
+    </>
   );
 }
 

@@ -3,22 +3,26 @@ import "./top_header.css";
 function TopHeader() {
     return (
         <div className="top-header">
-            <span>
                 <a href="#"><img src="src\assets\icon\search.png" alt="" /></a>
-            </span>
+       
+                <a href="#">
+                    <img src="src\assets\icon\squares.png" alt="" />
+                    <h1><a href="#">CORAL</a></h1>
+                    <img src="src\assets\icon\squares.png" alt="" />
+                </a>
+          
 
-            <span>
-                <img src="src\assets\icon\squares.png" alt="" />
-                <h1>CORAL</h1>
-                <img src="src\assets\icon\squares.png" alt="" />
-            </span>
+            <div>
+                <a href="#">
+                    <img src="src\assets\icon\profile.png" alt="" />
+                    <p>Account</p>
+                </a>
 
-            <span>
-                <img src="src\assets\icon\profile.png" alt="" />
-                <p>Account</p>
-                <img src="src\assets\icon\cart.png" alt="" />
-                <p>Shopping</p>
-            </span>
+                <a href="#">
+                    <img src="src\assets\icon\cart.png" alt="" />
+                    <p>Shopping</p>
+                </a>
+            </div>
 
         </div>
     );

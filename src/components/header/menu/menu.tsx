@@ -4,13 +4,14 @@ function Menu() {
     return (
         <div className="menu">
             <ul>
-                <li>Jewelry & Accessories</li>
-                <li>Clothing & Shoes</li>
-                <li>Home & Living</li>
-                <li>Wedding & Party</li>
-                <li>Toys & Entertaintment</li>
-                <li>Art & Collectibles</li>
-                <li>Craft Supplies & Tools</li>
+                <li><a href="#">Jewelry & Accessories</a></li>
+                <li><a href="#">Clothing & Shoes</a></li>
+                <li><a href="#">Home & Living</a></li>
+                <li><a href="#">Wedding & Party</a></li>
+                <li><a href="#">Toys & Entertaintment</a></li>
+                <li><a href="#">Art & Collectibles</a></li>
+                <li><a href="#">Craft Supplies & Tools</a></li>
+                <li><a href="#">Jewelry & Accessories</a></li>
             </ul>
         </div>
     );

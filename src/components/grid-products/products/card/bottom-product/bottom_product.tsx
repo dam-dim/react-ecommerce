@@ -9,10 +9,13 @@ type bottomProductProps = {
 function BottomProduct(props : bottomProductProps) {
     return (
         <div className="bottom-products">
-            <h3>{props.productName}</h3>
-            <p>Add To Cart</p>
-            <p>{props.productType}</p>
-            <p id="price">{props.productPrice}</p>
+            <h4>{props.productName}</h4>
+            <div className="second-row">
+                <p>{props.productType}</p>
+                <button>Add</button>
+                <p id="price">${props.productPrice}</p>
+            </div>
+            
         </div>
     );
 }

@@ -14,3 +14,8 @@
 .category {
     margin:  25px 28% 25px 28% ;
 }
+
+.category ul li a{
+    color: black;
+    text-decoration: none;
+}

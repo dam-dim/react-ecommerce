@@ -1,6 +1,34 @@
-.top-header img {
-    max-height: 100%;
+.first-col {
+    width: 300px;
+}
+
+.second-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 300px;
+}
+
+.third-col {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 300px;
+}
+
+.first-col img{
+    padding: 10px 0;
+}
+
+.second-col img {
+    padding: 10px 0;
+    position: relative;
+    top: 7px;
+}
+
+.third-col img {
     width: auto;
+    padding: 10px 0;
 }
 
 .top-header {
@@ -9,19 +37,30 @@
     justify-content: space-between;
     width: 1320px;
     margin: auto;
-    padding: 10px 0 10px 0;
+    padding: 20px 0;
 }
 
-h1 {
+.top-header h1 {
     display: inline;
+    padding: 10px 5px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
 }
 
 .top-header a {
     color: black;
     text-decoration: none;
+    height: 100%;
 }
 
-.top-header span a {
-    color: black;
-    text-decoration: none;
+.profile p, .shopping p{
+    display: inline;
+    padding-left: 10px;
+    top: -13px;
+    margin: 0;
+    position: relative;
+}
+
+.profile {
+    margin-right: 25px;
 }

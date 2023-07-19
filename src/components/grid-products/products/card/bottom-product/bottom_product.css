@@ -16,3 +16,15 @@
 .second-row p {
     margin: 0;
 }
+
+.first-row button {
+    cursor: pointer;
+    background-color: white;
+    margin: auto 0;
+    border-radius: 5px;
+}
+
+.first-row button:hover {
+    background-color: black;
+    color: white;
+}

@@ -15,7 +15,7 @@ function BottomProduct(props : bottomProductProps) {
         <div className="bottom-products">
             <div className="first-row">
                 <h4>{props.productName}</h4>
-                <a href="#"><button>Add</button></a>
+                <button>Add</button>
             </div>
 
             <div className="second-row">

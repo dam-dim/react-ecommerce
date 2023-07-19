@@ -1,0 +1,17 @@
+.top-header img {
+    height: auto;
+    width: auto;
+}
+
+.top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1320px;
+    margin: auto;
+    padding: 10px 0 10px 0;
+}
+
+h1 {
+    display: inline;
+}

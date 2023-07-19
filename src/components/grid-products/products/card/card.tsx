@@ -2,11 +2,24 @@ import BottomProduct from "./bottom-product/bottom_product";
 import "./card.css";
 import TopProduct from "./top-product/top_product";
 
-function Card() {
+type productProps = {
+    productImage: number
+    productName: string
+    productType: string
+    productPrice: number
+}
+
+function Card(props: productProps) {
     return (
         <div className="card">
-            {TopProduct()}
-            {BottomProduct()}
+            <TopProduct
+                productImage={props.productImage}
+            />
+            <BottomProduct
+               productType={props.productType} 
+               productName={props.productName} 
+               productPrice={props.productPrice} 
+            />
         </div>
     );
 }

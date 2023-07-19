@@ -1,11 +1,18 @@
 import "./bottom_product.css";
 
-function BottomProduct() {
+type bottomProductProps = {
+    productType: string
+    productName: string
+    productPrice: number
+}
+
+function BottomProduct(props : bottomProductProps) {
     return (
         <div className="bottom-products">
-            <h3>Title Product</h3>
-            <p>Type</p>
-            <p id="price">Price</p>
+            <h3>{props.productName}</h3>
+            <p>Add To Cart</p>
+            <p>{props.productType}</p>
+            <p id="price">{props.productPrice}</p>
         </div>
     );
 }

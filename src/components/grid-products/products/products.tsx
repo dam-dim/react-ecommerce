@@ -1,17 +1,26 @@
+import { ReactNode } from "react";
 import Card from "./card/card";
+import { items } from "./items";
 import "./products.css";
 
 function Products() {
+    const result : ReactNode[] = [];
+
+    items.forEach((item) => {
+        result.push(
+            <Card 
+                productImage = {item.productImage}
+                productName={item.productName} 
+                productType = {item.productType} 
+                productPrice = {item.productPrice}
+            />
+        );
+    });
+
     return (
         <div className="products">
-            {Card()}
-            {Card()}
-            {Card()}
-            {Card()}
-            {Card()}
-            {Card()}
+            {result}
         </div>
-       
     );
 }
 

@@ -1,0 +1,10 @@
+.header {
+    background-color: #D9D9D9;
+}
+
+hr {
+    border: solid white;
+    width: 1320px;
+    margin: auto;
+    border-width: 1px;
+}

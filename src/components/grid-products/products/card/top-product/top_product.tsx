@@ -1,9 +1,13 @@
 import "./top_product.css";
 
-function TopProduct() {
+type topProductProps = {
+    productImage: number
+}
+
+function TopProduct(props: topProductProps) {
     return (
         <div className="top-products">
-            <img src="src\assets\img\15.png" alt="" />
+            <img src = {`src\\assets\\img\\${props.productImage}.png`} alt="" />
         </div>
     );
 }

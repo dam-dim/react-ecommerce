@@ -1,3 +1,5 @@
+import "./category.css";
+
 function Category() {
     return (
         <div className="category">

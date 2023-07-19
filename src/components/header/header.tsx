@@ -6,6 +6,7 @@ function Header() {
     return (
         <div className="header">
             {TopHeader()}
+            <hr />
             {Menu()}
         </div>
     );

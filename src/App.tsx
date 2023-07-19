@@ -1,10 +1,10 @@
 import './App.css'
-import GridProducts from './components/grid-products/grid_products';
+import AppComponent from './components/app_component';
 
 function App() {
   return (
     <>
-      {GridProducts()}
+      {AppComponent()}
     </>
   );
 }

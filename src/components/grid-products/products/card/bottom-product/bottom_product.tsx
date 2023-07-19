@@ -7,12 +7,20 @@ type bottomProductProps = {
 }
 
 function BottomProduct(props : bottomProductProps) {
+
+    //TODO
+    //implement adding to the cart
+
     return (
         <div className="bottom-products">
-            <h4>{props.productName}</h4>
+            <div className="first-row">
+                <h4>{props.productName}</h4>
+                <a href="#"><button>Add</button></a>
+            </div>
+
             <div className="second-row">
                 <p>{props.productType}</p>
-                <button>Add</button>
+                
                 <p id="price">${props.productPrice}</p>
             </div>
             

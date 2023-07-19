@@ -7,6 +7,9 @@ function Products() {
     const result : ReactNode[] = [];
 
     items.forEach((item) => {
+        // TODO
+        // if current filter equals type then render
+
         result.push(
             <Card 
                 productImage = {item.productImage}
@@ -15,6 +18,7 @@ function Products() {
                 productPrice = {item.productPrice}
             />
         );
+        
     });
 
     return (

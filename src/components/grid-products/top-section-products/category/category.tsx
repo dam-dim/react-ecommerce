@@ -1,36 +1,35 @@
 import "./category.css";
 import { useState, MouseEvent, ReactNode } from "react";
 
+let current: string = "All Products";
+
+export function getState() {
+    return current;
+}
+
 function Category() {
     const categories: string[] = ["All Products", "Scarf", "Dress", "Bag", "Shoe", "Glasses"];
     const result: ReactNode[] = [];
 
-    let [state, setState] = useState("All Products");
+    const [state, setState] = useState("All Products");
 
     const handleClick = (event: MouseEvent) => {
         event.preventDefault();
-        const current: string = event.currentTarget.firstChild?.textContent == null ? "" : event.currentTarget.firstChild?.textContent;
+        current = event.currentTarget.firstChild?.textContent == null ? "" : event.currentTarget.firstChild?.textContent;
         setState(() => current);
     }
 
-    console.log(state);
-    
-
     categories.forEach((category: string) => {
-        const isCurrent: boolean = category == state;
-        if (isCurrent) {
+        if (category == state) {
             result.push(
-                <li onClick={handleClick}><a href="#" id = {isCurrent ? "current" : ""} style={isCurrent ? {fontWeight: "bold"} : {}}>{category}</a></li>
+                <li onClick={handleClick}><a href="#" id = "current" style={{fontWeight: "bold"}}>{category}</a></li>
             );
         } else {
             result.push(
-                <li onClick={handleClick}><a href="#">{category}</a></li>
+                <li onClick={handleClick}><a href="#" style={{fontWeight: "normal"}}>{category}</a></li>
             );
         }
     });
-
-    //TODO
-    //implement event listener for filtering
 
     return (
         <div className="category">

@@ -2,16 +2,17 @@ import { ReactNode } from "react";
 import Card from "./card/card";
 import { items } from "./items";
 import "./products.css";
+import { getState } from "../top-section-products/category/category";
 
 function Products() {
     const result : ReactNode[] = [];
 
-    const current = document.getElementById("current")?.innerHTML;
+    const current = getState();
+    console.log(current);
+    
 
     items.forEach((item) => {
-        // TODO
-        // if current filter equals type then render
-        if (item.productType === current) {
+        if (current == "All Products") {
             result.push(
                 <Card 
                     productImage = {item.productImage}
@@ -20,7 +21,21 @@ function Products() {
                     productPrice = {item.productPrice}
                 />
             );
-        } 
+            return;
+        }
+
+        if (item.productType == current) {
+            result.push(
+                <Card 
+                    productImage = {item.productImage}
+                    productName={item.productName} 
+                    productType = {item.productType} 
+                    productPrice = {item.productPrice}
+                />
+            );
+        }
+
+
     });
 
     return (

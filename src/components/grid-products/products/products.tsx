@@ -6,19 +6,21 @@ import "./products.css";
 function Products() {
     const result : ReactNode[] = [];
 
+    const current = document.getElementById("current")?.innerHTML;
+
     items.forEach((item) => {
         // TODO
         // if current filter equals type then render
-
-        result.push(
-            <Card 
-                productImage = {item.productImage}
-                productName={item.productName} 
-                productType = {item.productType} 
-                productPrice = {item.productPrice}
-            />
-        );
-        
+        if (item.productType === current) {
+            result.push(
+                <Card 
+                    productImage = {item.productImage}
+                    productName={item.productName} 
+                    productType = {item.productType} 
+                    productPrice = {item.productPrice}
+                />
+            );
+        } 
     });
 
     return (

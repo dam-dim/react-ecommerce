@@ -2,14 +2,12 @@ import { ReactNode } from "react";
 import Card from "./card/card";
 import { items } from "./items";
 import "./products.css";
-import { getState } from "../top-section-products/category/category";
+import { getCategoryState } from "../top-section-products/category/category";
 
 function Products() {
     const result : ReactNode[] = [];
 
-    const current = getState();
-    console.log(current);
-    
+    const current = getCategoryState();
 
     items.forEach((item) => {
         if (current == "All Products") {

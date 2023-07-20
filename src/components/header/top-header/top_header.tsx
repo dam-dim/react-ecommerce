@@ -1,6 +1,21 @@
 import "./top_header.css";
+import { useState } from "react";
+
+let isClicked = false;
+
+export function getIsClicked() {
+    return isClicked;
+}
 
 function TopHeader() {
+    function handleClick() {
+        setState(() => !state);
+    }
+
+    const [state, setState] = useState(false);
+
+    isClicked = state;
+
     return (
         <div className="top-header">
             <div className="first-col">
@@ -24,7 +39,7 @@ function TopHeader() {
                 </div>
 
                  <div className="shopping">
-                    <a href="#">
+                    <a href="#" onClick={handleClick}>
                         <img src="src\assets\icon\cart.png" alt="" />
                         <p>Shopping</p>
                     </a>

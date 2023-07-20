@@ -1,0 +1,10 @@
+.cart {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}

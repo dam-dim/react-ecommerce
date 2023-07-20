@@ -3,7 +3,7 @@ import { useState, MouseEvent, ReactNode } from "react";
 
 let current: string = "All Products";
 
-export function getState() {
+export function getCategoryState() {
     return current;
 }
 

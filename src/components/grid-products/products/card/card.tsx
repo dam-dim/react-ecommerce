@@ -4,10 +4,21 @@ import "./card.css";
 import TopProduct from "./top-product/top_product";
 import { ReactNode, MouseEventHandler } from 'react';
 
-let cartItems: ReactNode[] = [];
+type itemObj = {
+    id: string
+    item: ReactNode
+}
+
+let cartItems: itemObj[] = [];
 
 export function getCartItems() {
-    return cartItems;
+    const items: ReactNode[] = [];
+
+    cartItems.map((element)=> {
+        items.push(element.item)
+    });
+
+    return items;
 }
 
 export function getCartSize() {
@@ -31,22 +42,18 @@ const handleDelete: MouseEventHandler = (e) => {
 };
 
 function Card(props: productProps) {
-
-
-
     function handleClick() {
-        const cartItem = <CartItem
-                            itemImage={props.productImage}
-                            itemName={props.productName}
-                            itemPrice={props.productPrice}
-                            handleDelete={handleDelete}
-                            />
 
-        cartItems.push(
-            <li id={props.productName}>
-                {cartItem}
-            </li>
-        );
+        const cartItem =<li id={props.productName}>
+                            <CartItem
+                                itemImage={props.productImage}
+                                itemName={props.productName}
+                                itemPrice={props.productPrice}
+                                handleDelete={handleDelete}
+                            />
+                        </li>;
+
+        cartItems.push({id:props.productName, item:cartItem});
     }
 
     return (
